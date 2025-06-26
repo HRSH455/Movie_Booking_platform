@@ -28,7 +28,7 @@ public class MovieController {
     }
 
     @PutMapping("api/movie/{movieId}")
-    public ResponseEntity<?>updateById(@PathVariable long movieId , @RequestBody Movie m)
+    public Movie updateById(@PathVariable long movieId , @RequestBody Movie m)
     {
         return movieService.updateById(movieId,m);
     }
