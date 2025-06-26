@@ -18,16 +18,19 @@ import com.examly.springapp.service.serviceImpl.MovieServiceImpl;
 public class MovieController {
     @Autowired
     MovieServiceImpl movieService;
+    
     @PostMapping("api/movie")
-    public ResponseEntity<?>addMovie(@RequestBody Movie movie){
+    public ResponseEntity<?>addMovie(@RequestBody Movie movie)
+    {
         Movie m = movieService.add(movie);
         return new ResponseEntity<>(m,HttpStatus.valueOf(201));
         
     }
 
-    @PutMapping(api/movie/{movieId})
-    public ResponseEntity<?>updateById(@PathVariable long movieId , RequestBody Movie movie){
-        
+    @PutMapping("api/movie/{movieId}")
+    public ResponseEntity<?>updateById(@PathVariable long movieId , @RequestBody Movie m)
+    {
+        return movieService.updateById(movieId,m);
     }
 
 }
