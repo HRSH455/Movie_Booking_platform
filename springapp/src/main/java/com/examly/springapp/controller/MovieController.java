@@ -23,7 +23,7 @@ public class MovieController {
     public ResponseEntity<?>addMovie(@RequestBody Movie movie)
     {
         Movie m = movieService.add(movie);
-        return new ResponseEntity<>(m,HttpStatus.valueOf(201));
+        return new ResponseEntity<>(m,HttpStatus.valueOf(200));
         
     }
 
