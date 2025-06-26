@@ -20,7 +20,7 @@ public class TestController {
     }
 
     @GetMapping("api/test/movie")
-    public ResponseEntity<?>getAll(){
+    public List<Movie> getMovies(){
         List<Movie> li = new ArrayList<>();
         
         li.add(new Movie(1l,"Don",120,"thriller",200));
@@ -28,6 +28,7 @@ public class TestController {
         li.add(new Movie(3l,"Donret",165,"Crime",120));
         li.add(new Movie(4l,"Don2",124,"Comedy",150));
         li.add(new Movie(5l,"Don4",150,"Dramedy",204));
+        return li;
     }
 
 }
