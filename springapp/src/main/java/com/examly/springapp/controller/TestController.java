@@ -5,8 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @GetMapping("/api/test/welcome")
-    public String Welcome(){
+    @GetMapping("api/test/welcome")
+    public String welcome(){
         return "Welcome to the Movie Booking Application";
     }
+
+    // @GetMapping("api/")
+
 }
