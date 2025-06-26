@@ -4,8 +4,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestController {
+
     @GetMapping("/api/test/welcome")
-    public String welcomeMessage(){
+    public String Welcome(){
         return "Welcome to the Movie Booking Application";
     }
 }
