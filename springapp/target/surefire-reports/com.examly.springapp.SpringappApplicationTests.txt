@@ -1,24 +1,24 @@
 -------------------------------------------------------------------------------
 Test set: com.examly.springapp.SpringappApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 18, Failures: 13, Errors: 0, Skipped: 0, Time elapsed: 3.176 s <<< FAILURE! - in com.examly.springapp.SpringappApplicationTests
-backend_day16_testGetAllMovieList  Time elapsed: 0.041 s  <<< FAILURE!
+Tests run: 18, Failures: 13, Errors: 0, Skipped: 0, Time elapsed: 2.959 s <<< FAILURE! - in com.examly.springapp.SpringappApplicationTests
+backend_day16_testGetAllMovieList  Time elapsed: 0.017 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<404>
 	at com.examly.springapp.SpringappApplicationTests.backend_day16_testGetAllMovieList(SpringappApplicationTests.java:97)
 
-backend_day17_testcontrollerMovieFile  Time elapsed: 0 s  <<< FAILURE!
+backend_day17_testcontrollerMovieFile  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.examly.springapp.SpringappApplicationTests.backend_day17_testcontrollerMovieFile(SpringappApplicationTests.java:109)
 
-backend_day17_testserviceMovieFile  Time elapsed: 0 s  <<< FAILURE!
+backend_day17_testserviceMovieFile  Time elapsed: 0.001 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.examly.springapp.SpringappApplicationTests.backend_day17_testserviceMovieFile(SpringappApplicationTests.java:119)
 
-backend_day17_testAddMovie  Time elapsed: 0.035 s  <<< FAILURE!
+backend_day17_testAddMovie  Time elapsed: 0.027 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<404>
 	at com.examly.springapp.SpringappApplicationTests.backend_day17_testAddMovie(SpringappApplicationTests.java:131)
 
-backend_day18_testGetAllMovie  Time elapsed: 0.01 s  <<< FAILURE!
+backend_day18_testGetAllMovie  Time elapsed: 0.017 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<404>
 	at com.examly.springapp.SpringappApplicationTests.backend_day18_testGetAllMovie(SpringappApplicationTests.java:143)
 
@@ -26,7 +26,7 @@ backend_day19_testrepositoryFile  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.examly.springapp.SpringappApplicationTests.backend_day19_testrepositoryFile(SpringappApplicationTests.java:156)
 
-backend_day19_testBookingFile  Time elapsed: 0 s  <<< FAILURE!
+backend_day19_testBookingFile  Time elapsed: 0.001 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.examly.springapp.SpringappApplicationTests.backend_day19_testBookingFile(SpringappApplicationTests.java:167)
 
