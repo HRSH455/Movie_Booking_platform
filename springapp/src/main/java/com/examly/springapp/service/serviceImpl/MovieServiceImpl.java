@@ -28,4 +28,19 @@ public class MovieServiceImpl implements MovieService {
             return null;
         }
 
+    public List<Movie> getMovie() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getMovie'");
+    }
+
+    public List<Movie> getMovieById(int movieId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getMovieById'");
+    }
+
+    public boolean DeleteById(int movieId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'DeleteById'");
+    }
+
 }
