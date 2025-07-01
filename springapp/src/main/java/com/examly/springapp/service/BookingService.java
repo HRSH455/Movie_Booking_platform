@@ -1,0 +1,13 @@
+package com.examly.springapp.service;
+
+import java.util.List;
+
+import com.examly.springapp.entity.Booking;
+
+public interface BookingService {
+    public Booking createBooking(Booking booking);
+    public Booking getBookingById(long bookingId);
+    public List<Booking> getAllBookings();
+    public boolean deleteBooking( long bookingId);
+    
+}

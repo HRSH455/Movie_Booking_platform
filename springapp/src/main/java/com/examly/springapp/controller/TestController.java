@@ -23,11 +23,11 @@ public class TestController {
     public List<Movie> getMovies(){
         List<Movie> li = new ArrayList<>();
         
-        li.add(new Movie(1l,"Don",120,"thriller",200));
-        li.add(new Movie(2l,"Donreturns",193,"RomCom",210));
-        li.add(new Movie(3l,"Donret",165,"Crime",120));
-        li.add(new Movie(4l,"Don2",124,"Comedy",150));
-        li.add(new Movie(5l,"Don4",150,"Dramedy",204));
+        // li.add(new Movie(1l,"Don",120,"thriller",200));
+        // li.add(new Movie(2l,"Donreturns",193,"RomCom",210));
+        // li.add(new Movie(3l,"Donret",165,"Crime",120));
+        // li.add(new Movie(4l,"Don2",124,"Comedy",150));
+        // li.add(new Movie(5l,"Don4",150,"Dramedy",204));
         return li;
     }
 
