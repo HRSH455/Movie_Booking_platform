@@ -1,24 +1,24 @@
 -------------------------------------------------------------------------------
 Test set: com.examly.springapp.SpringappApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 18, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 3.787 s <<< FAILURE! - in com.examly.springapp.SpringappApplicationTests
-backend_day18_testGetAllMovie  Time elapsed: 0.056 s  <<< FAILURE!
+Tests run: 18, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 4.194 s <<< FAILURE! - in com.examly.springapp.SpringappApplicationTests
+backend_day18_testGetAllMovie  Time elapsed: 0.018 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<405>
 	at com.examly.springapp.SpringappApplicationTests.backend_day18_testGetAllMovie(SpringappApplicationTests.java:143)
 
-backend_day19_testrepositoryFile  Time elapsed: 0.002 s  <<< FAILURE!
+backend_day19_testrepositoryFile  Time elapsed: 0.003 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.examly.springapp.SpringappApplicationTests.backend_day19_testrepositoryFile(SpringappApplicationTests.java:156)
 
-backend_day19_testBookingFile  Time elapsed: 0.006 s  <<< FAILURE!
+backend_day19_testBookingFile  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.examly.springapp.SpringappApplicationTests.backend_day19_testBookingFile(SpringappApplicationTests.java:167)
 
-backend_day21_testServiceBookingFile  Time elapsed: 0.005 s  <<< FAILURE!
+backend_day21_testServiceBookingFile  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.examly.springapp.SpringappApplicationTests.backend_day21_testServiceBookingFile(SpringappApplicationTests.java:212)
 
-backend_day22_testExceptionFile  Time elapsed: 0.005 s  <<< FAILURE!
+backend_day22_testExceptionFile  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.examly.springapp.SpringappApplicationTests.backend_day22_testExceptionFile(SpringappApplicationTests.java:223)
 
@@ -26,7 +26,7 @@ backend_day24_testcontrollerBookingFile  Time elapsed: 0.003 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.examly.springapp.SpringappApplicationTests.backend_day24_testcontrollerBookingFile(SpringappApplicationTests.java:233)
 
-backend_day25_testEntityUserFile  Time elapsed: 0.004 s  <<< FAILURE!
+backend_day25_testEntityUserFile  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.examly.springapp.SpringappApplicationTests.backend_day25_testEntityUserFile(SpringappApplicationTests.java:248)
 
