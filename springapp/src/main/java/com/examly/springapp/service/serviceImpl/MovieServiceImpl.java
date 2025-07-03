@@ -30,17 +30,17 @@ public class MovieServiceImpl implements MovieService {
 
     public List<Movie> getMovie() {
         
-      return null;
+      return repo.findAll();
     }
 
-    public List<Movie> getMovieById(int movieId) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getMovieById'");
-    }
+    public Movie getMovieById(long movieId) {
+        
+         return repo.findById(movieId).orElse(null);
+         
+        }
 
-    public boolean DeleteById(int movieId) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'DeleteById'");
+    public boolean DeleteById(long movieId) {
+
     }
 
 }

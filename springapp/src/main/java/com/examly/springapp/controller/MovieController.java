@@ -46,7 +46,7 @@ public class MovieController {
     }
 
     @GetMapping("/api/movie/{movieId}")
-    public List<Movie> getMovie(@PathVariable int movieId){
+    public List<Movie> getMovie(@PathVariable long movieId){
         List<Movie> li = movieService.getMovieById(movieId);
         if(!li.isEmpty()){
             return li;
@@ -54,7 +54,7 @@ public class MovieController {
         return li;
     }
     @DeleteMapping("/api/movie/{movieId}")
-    public boolean DeleteById(@PathVariable int movieId){
+    public boolean DeleteById(@PathVariable long movieId){
         boolean res = movieService.DeleteById(movieId);
         if(res){
             return true;
