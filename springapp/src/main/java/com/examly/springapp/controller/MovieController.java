@@ -47,7 +47,7 @@ public class MovieController {
 
     @GetMapping("/api/movie/{movieId}")
     public List<Movie> getMovie(@PathVariable long movieId){
-        List<Movie> li = movieService.getMovieById(movieId);
+        List<Movie> li = (List<Movie>) movieService.getMovieById(movieId);
         if(!li.isEmpty()){
             return li;
         }

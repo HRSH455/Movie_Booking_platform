@@ -40,7 +40,11 @@ public class MovieServiceImpl implements MovieService {
         }
 
     public boolean DeleteById(long movieId) {
-
+        if(repo.existsById(movieId)){
+            repo.deleteById(movieId);
+            return true;
+            }
+            return false;
     }
 
 }
