@@ -9,5 +9,6 @@ public interface BookingService {
     public Booking getBookingById(long bookingId);
     public List<Booking> getAllBookings();
     public boolean deleteBooking( long bookingId);
+    public Object addBooking(Booking booking);
     
 }
