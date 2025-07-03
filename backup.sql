@@ -36,8 +36,11 @@ CREATE TABLE `booking` (
   `seat_count` int(11) NOT NULL,
   `total_cost` double NOT NULL,
   `movie_id` bigint(20) DEFAULT NULL,
+  `user_user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`booking_id`),
   KEY `FKsoq2aivnxa8vwnlgeyn5x0la9` (`movie_id`),
+  KEY `FKdxt6l0m3hxp1frtqkkjxd1isj` (`user_user_id`),
+  CONSTRAINT `FKdxt6l0m3hxp1frtqkkjxd1isj` FOREIGN KEY (`user_user_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `FKsoq2aivnxa8vwnlgeyn5x0la9` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -121,6 +124,55 @@ LOCK TABLES `movie_seq` WRITE;
 INSERT INTO `movie_seq` VALUES (51);
 /*!40000 ALTER TABLE `movie_seq` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user` (
+  `user_id` int(11) NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `mobile_number` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `user_role` varchar(255) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_seq`
+--
+
+DROP TABLE IF EXISTS `user_seq`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user_seq` (
+  `next_val` bigint(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_seq`
+--
+
+LOCK TABLES `user_seq` WRITE;
+/*!40000 ALTER TABLE `user_seq` DISABLE KEYS */;
+INSERT INTO `user_seq` VALUES (1);
+/*!40000 ALTER TABLE `user_seq` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -131,4 +183,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-03 12:54:33
+-- Dump completed on 2025-07-03 12:57:59
