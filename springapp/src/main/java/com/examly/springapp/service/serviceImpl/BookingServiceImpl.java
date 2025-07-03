@@ -16,8 +16,10 @@ public class BookingServiceImpl {
     public Booking createBooking(Booking booking){
         return repoB.save(booking);
     }
-    public Booking getBookingById(long bookingId){
-        return repoB.findById(bookingId).orElse(null);
+    public List<Booking> getBookingById(long bookingId){
+        
+        List<Booking> b =repoB.findById(bookingId).orElse(null);
+        return repoB.save(b);
 
     }
     public List<Booking> getAllBookings(){
@@ -31,6 +33,18 @@ public class BookingServiceImpl {
         }
         return false;
 
+    }
+    public Object addBooking(Booking booking) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addBooking'");
+    }
+    public List<Booking> getBookingBymovieId(int bookingId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getBookingBymovieId'");
+    }
+    public boolean deleteBookingById(int bookingId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteBookingById'");
     }
 
 }

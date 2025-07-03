@@ -15,12 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.examly.springapp.entity.Booking;
 import com.examly.springapp.repository.BookingRepo;
 import com.examly.springapp.service.BookingService;
+import com.examly.springapp.service.serviceImpl.BookingServiceImpl;
 
 @RestController
 public class BookingController {
 
     @Autowired
-    BookingService service;
+    BookingServiceImpl service;
 
     @Autowired
     BookingRepo repoB;
@@ -50,7 +51,7 @@ public class BookingController {
 
     @GetMapping("/api/booking/movie/{movieId}")
     public ResponseEntity<?>getBookingsBymovieId(@PathVariable int bookingId){
-        List<Booking> b = service.getBookingById(bookingId);
+        List<Booking> b = service.getBookingBymovieId(bookingId);
         if(!b.isEmpty()){
             return new ResponseEntity<>(b,HttpStatus.valueOf(200));
         }
