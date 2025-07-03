@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: com.examly.springapp.SpringappApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 18, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.085 s <<< FAILURE! - in com.examly.springapp.SpringappApplicationTests
-backend_day18_testGetAllMovie  Time elapsed: 0.012 s  <<< ERROR!
-jakarta.servlet.ServletException: Request processing failed: java.lang.UnsupportedOperationException: Unimplemented method 'getMovie'
+Tests run: 18, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.348 s <<< FAILURE! - in com.examly.springapp.SpringappApplicationTests
+backend_day18_testGetAllMovie  Time elapsed: 0.01 s  <<< ERROR!
+jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.isEmpty()" because "li" is null
 	at com.examly.springapp.SpringappApplicationTests.backend_day18_testGetAllMovie(SpringappApplicationTests.java:141)
-Caused by: java.lang.UnsupportedOperationException: Unimplemented method 'getMovie'
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.List.isEmpty()" because "li" is null
 	at com.examly.springapp.SpringappApplicationTests.backend_day18_testGetAllMovie(SpringappApplicationTests.java:141)
 
