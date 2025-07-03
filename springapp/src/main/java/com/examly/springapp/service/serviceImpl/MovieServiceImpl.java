@@ -29,7 +29,8 @@ public class MovieServiceImpl implements MovieService {
         }
 
     public List<Movie> getMovie() {
-        return li;
+        
+      return null;
     }
 
     public List<Movie> getMovieById(int movieId) {
