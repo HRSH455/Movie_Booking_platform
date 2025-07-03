@@ -14,14 +14,18 @@ public class Booking {
     @JoinColumn(name = "movieId")
     private Movie movie;
 
+    @ManyToOne
+    private User user;
+
     public Booking() {
     }
 
-    public Booking(long bookingId, int seatCount, double totalCost, Movie movie) {
+    public Booking(long bookingId, int seatCount, double totalCost, Movie movie, User user) {
         this.bookingId = bookingId;
         this.seatCount = seatCount;
         this.totalCost = totalCost;
         this.movie = movie;
+        this.user = user;
     }
 
     public long getBookingId() {
@@ -55,6 +59,14 @@ public class Booking {
     public void setMovie(Movie movie) {
         this.movie = movie;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
         
-    
 }

@@ -16,9 +16,9 @@ public class BookingServiceImpl {
     public Booking createBooking(Booking booking){
         return repoB.save(booking);
     }
-    public List<Booking> getBookingById(long bookingId){
+    public  Booking getBookingById(long bookingId){
         
-        List<Booking> b =repoB.findById(bookingId).orElse(null);
+        Booking b =repoB.findById(bookingId).orElse(null);
         return repoB.save(b);
 
     }
