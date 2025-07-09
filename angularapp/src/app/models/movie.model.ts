@@ -1,5 +1,5 @@
 export interface Movie{
-    movie ?:number;
+    movieId?:number;
     title :string,
     genre :string,
     duration :number;
