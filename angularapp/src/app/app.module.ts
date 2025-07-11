@@ -8,6 +8,7 @@ import { AdminaddmovieComponent } from './components/adminaddmovie/adminaddmovie
 import { AdminviewmovieComponent } from './components/adminviewmovie/adminviewmovie.component';
 import { AdminviewbookingComponent } from './components/adminviewbooking/adminviewbooking.component';
 import { UserviewbookingComponent } from './components/userviewbooking/userviewbooking.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UserviewbookingComponent } from './components/userviewbooking/userviewb
     AdminaddmovieComponent,
     AdminviewmovieComponent,
     AdminviewbookingComponent,
-    UserviewbookingComponent
+    UserviewbookingComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
