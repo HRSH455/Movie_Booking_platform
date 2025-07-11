@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminviewbookingComponent implements OnInit {
   bookings =[];
+  loadBookings(){
+    
+  }
+  updateBookingStatus(bookingId:number ,status :string){
+
+  }
   constructor() { }
 
   ngOnInit(): void {

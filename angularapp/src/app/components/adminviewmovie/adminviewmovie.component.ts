@@ -10,7 +10,13 @@ export class AdminviewmovieComponent implements OnInit {
 
    movies =[];
    errorMessage ='';
-   
+   updateMovie(){
+    
+   }
+   deleteMovie(){
+
+   }
+
   constructor() { }
 
   ngOnInit(): void {
