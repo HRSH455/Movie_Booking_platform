@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from 'src/app/models/movie.model';
 
 @Component({
   selector: 'app-adminaddmovie',
@@ -6,12 +7,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adminaddmovie.component.css']
 })
 export class AdminaddmovieComponent implements OnInit {
-  movie ={
+  movie :Movie ={
+    title: '',
+    genre: '',
+    duration: 0,
+    price: 0
+  };
+  isEditing :boolean = true;
+  errorMessage ='';
+  loadMovie(movieId :number){
+
+  }
+  addOrUpdateMovie(){
+
+  }
+  closeModal(){
     
   }
+
   constructor() { }
 
   ngOnInit(): void {
+    if(this.isEditing ===true){
+
+    }
   }
 
 }
