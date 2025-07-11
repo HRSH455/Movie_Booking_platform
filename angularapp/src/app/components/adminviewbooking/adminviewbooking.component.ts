@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adminviewbooking.component.css']
 })
 export class AdminviewbookingComponent implements OnInit {
-  booking =[];
+  bookings =[];
   constructor() { }
 
   ngOnInit(): void {
