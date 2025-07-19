@@ -10,9 +10,10 @@ import com.examly.springapp.entity.Movie;
 import com.examly.springapp.exception.InsufficientSeatCountException;
 import com.examly.springapp.repository.BookingRepo;
 import com.examly.springapp.repository.MovieRepo;
+import com.examly.springapp.service.BookingService;
 
 @Service
-public class BookingServiceImpl {
+public class BookingServiceImpl implements BookingService{
 
    @Autowired
     private BookingRepo bookingRepo;

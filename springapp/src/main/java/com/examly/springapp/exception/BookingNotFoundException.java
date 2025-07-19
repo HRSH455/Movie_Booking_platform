@@ -1,5 +1,7 @@
 package com.examly.springapp.exception;
 
-public class BookingNotFoundException {
-
+public class BookingNotFoundException extends Exception {
+    public BookingNotFoundException(String message) {
+        super(message);
+    }
 }

@@ -7,9 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.examly.springapp.entity.User;
 import com.examly.springapp.repository.UserRepo;
+import com.examly.springapp.service.UserService;
 
 @Service
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepo userRepo;
 
