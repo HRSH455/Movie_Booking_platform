@@ -7,5 +7,6 @@ import com.examly.springapp.entity.Booking;
 
 @Repository
 public interface BookingRepo extends JpaRepository<Booking,Long>{
-    
+    // public findByMovieMovieId(Long movieId);
+    // public findByUserUserId(int userId);
 }
