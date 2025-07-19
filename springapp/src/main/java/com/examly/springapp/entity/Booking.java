@@ -15,6 +15,7 @@ public class Booking {
     private Movie movie;
 
     @ManyToOne
+    @JoinColumn(name ="userId")
     private User user;
 
     public Booking() {
