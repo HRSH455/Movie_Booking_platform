@@ -1,6 +1,6 @@
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/entity/Booking.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/configuration/CrosConfig.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/service/serviceImpl/UserServiceImpl.java
-/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/configuration/CorsConfig.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/controller/BookingController.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/service/serviceImpl/BookingServiceImpl.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/entity/User.java

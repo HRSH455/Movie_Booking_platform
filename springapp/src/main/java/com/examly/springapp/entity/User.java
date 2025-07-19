@@ -1,6 +1,6 @@
 package com.examly.springapp.entity;
 
-import com.fasterxml.jackson.annotation.ObjectIdGenerators.StringIdGenerator;
+
 
 import jakarta.persistence.*;
 

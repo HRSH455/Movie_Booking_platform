@@ -25,6 +25,36 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `appdb` /*!40100 DEFAULT CHARACTER SET 
 USE `appdb`;
 
 --
+-- Table structure for table `booking`
+--
+
+DROP TABLE IF EXISTS `booking`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `booking` (
+  `booking_id` bigint(20) NOT NULL,
+  `seat_count` int(11) NOT NULL,
+  `total_cost` double NOT NULL,
+  `movie_id` bigint(20) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`booking_id`),
+  KEY `FKsoq2aivnxa8vwnlgeyn5x0la9` (`movie_id`),
+  KEY `FKkgseyy7t56x7lkjgu3wah5s3t` (`user_id`),
+  CONSTRAINT `FKkgseyy7t56x7lkjgu3wah5s3t` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
+  CONSTRAINT `FKsoq2aivnxa8vwnlgeyn5x0la9` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `booking`
+--
+
+LOCK TABLES `booking` WRITE;
+/*!40000 ALTER TABLE `booking` DISABLE KEYS */;
+/*!40000 ALTER TABLE `booking` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `booking_seq`
 --
 
@@ -152,4 +182,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-19 10:16:32
+-- Dump completed on 2025-07-19 10:31:38
