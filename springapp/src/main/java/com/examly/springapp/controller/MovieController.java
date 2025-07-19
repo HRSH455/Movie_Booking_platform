@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.examly.springapp.entity.Movie;
@@ -19,47 +20,34 @@ import com.examly.springapp.service.serviceImpl.MovieServiceImpl;
 
 
 @RestController
+@RequestMapping("/api/movie")
 public class MovieController {
     @Autowired
     MovieServiceImpl movieService;
     
-    @PostMapping("api/movie")
-    public ResponseEntity<?>addMovie(@RequestBody Movie movie)
-    {
-        Movie m = movieService.add(movie);
-        return new ResponseEntity<>(m,HttpStatus.valueOf(200));
-        
+    @PostMapping
+    public Movie addMovie(@RequestBody Movie movie) {
+        return movieService.addMovie(movie);
     }
 
-    @PutMapping("api/movie/{movieId}")
-    public Movie updateById(@PathVariable long movieId , @RequestBody Movie m)
-    {
-        return movieService.updateById(movieId,m);
-    }
-    @GetMapping("/api/movie")
-    public List<Movie> getMovie(){
-        List<Movie> li = movieService.getMovie();
-        if(!li.isEmpty()){
-            return li;
-        }
-        return null;
+    @GetMapping
+    public List<Movie> getAllMovies() {
+        return movieService.getAllMovies();
     }
 
-    @GetMapping("/api/movie/{movieId}")
-    public List<Movie> getMovie(@PathVariable long movieId){
-        List<Movie> li = (List<Movie>) movieService.getMovieById(movieId);
-        if(!li.isEmpty()){
-            return li;
-        }
-        return li;
+    @GetMapping("/{movieId}")
+    public Movie getMovieById(@PathVariable Long movieId) {
+        return movieService.getMovieById(movieId);
     }
-    @DeleteMapping("/api/movie/{movieId}")
-    public boolean DeleteById(@PathVariable long movieId){
-        boolean res = movieService.DeleteById(movieId);
-        if(res){
-            return true;
-        }
-        return false;
+
+    @PutMapping("/{movieId}")
+    public Movie updateMovie(@PathVariable Long movieId, @RequestBody Movie movie) {
+        return movieService.updateMovie(movieId, movie);
+    }
+
+    @DeleteMapping("/{movieId}")
+    public boolean deleteMovie(@PathVariable Long movieId) {
+        return movieService.deleteMovie(movieId);
     }
 
 

@@ -10,7 +10,7 @@ import com.examly.springapp.exception.InsufficientSeatCountException;
 
 @Service
 public interface BookingService {
-    Booking createBooking(Booking booking);
+    Booking createBooking(Booking booking) throws InsufficientSeatCountException;
     Booking getBookingById(long bookingId);
     List<Booking> getAllBooking();
     boolean deleteBooking(long bookingId);
