@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
-import { User } from '../../models/user.model';
+// import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+// import { Router } from '@angular/router';
+// import { AuthService } from '../../services/auth.service';
+// import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-registration',
@@ -10,15 +10,21 @@ import { User } from '../../models/user.model';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
-  registerForm: FormGroup;
-  errorMessage: string = '';
-  successMessage: string = '';
+  // registerForm: FormGroup;
+  // errorMessage: string = '';
+  // successMessage: string = '';
+  username :string =''
+  password :string = ''
+  email :string =''
 
-  constructor(
+  ngOnInit() :void{
+
+  }
+  constructor(){}
     // private fb: FormBuilder,
     // private authService: AuthService,
     // private router: Router
-  ) {
+  
     // this.registerForm = this.fb.group({
     //   username: ['', Validators.required],
     //   email: ['', [Validators.required, Validators.email]],
@@ -27,7 +33,7 @@ export class RegistrationComponent {
     //   mobileNumber: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
     //   userRole: ['', Validators.required]
     // }, { validator: this.passwordMatchValidator });
-  }
+  
 
   // passwordMatchValidator(form: FormGroup) {
   //   return form.get('password')?.value === form.get('confirmPassword')?.value 

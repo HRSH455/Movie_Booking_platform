@@ -1,6 +1,21 @@
 <!-- <div class="registration-container"> -->
     <h2>Complete The Registration</h2>
+    <input type="text" name="username" id="username" [(ngModel)]="username">
+    <div *ngIf="!username" class="error-message">
+    Password is required
+    Username is required
+    </div>
     
+    <input type="text" name="email" id="email" [(ngModel)]="email">
+    <div *ngIf="!email" class="error-message">Email is required
+    Email is required
+    </div>
+    
+    <input type="password" name="password" id="password" [(ngModel)]="password">
+    <div *ngIf="!password" class="error-message" >
+    Password is required
+    Username is required
+    </div>
     <!-- <form [formGroup]="registerForm" (ngSubmit)="register()">
       <div class="form-group">
         <label for="username">Username*</label>
