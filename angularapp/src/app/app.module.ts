@@ -9,7 +9,6 @@ import { AdminviewmovieComponent } from './components/adminviewmovie/adminviewmo
 import { AdminviewbookingComponent } from './components/adminviewbooking/adminviewbooking.component';
 import { UserviewbookingComponent } from './components/userviewbooking/userviewbooking.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { AdminnavComponent } from './adminnav/adminnav.component';
 import { AuthguardComponent } from './components/authguard/authguard.component';
 import { ErrorComponent } from './components/error/error.component';
 import { LoginComponent } from './components/login/login.component';
@@ -17,6 +16,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { UserbookingmovieComponent } from './components/userbookingmovie/userbookingmovie.component';
 import { UsernavComponent } from './components/usernav/usernav.component';
 import { UserviewmovieComponent } from './components/userviewmovie/userviewmovie.component';
+import { AdminnavComponent } from './components/adminnav/adminnav.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +27,14 @@ import { UserviewmovieComponent } from './components/userviewmovie/userviewmovie
     AdminviewbookingComponent,
     UserviewbookingComponent,
     NavbarComponent,
-    AdminnavComponent,
     AuthguardComponent,
     ErrorComponent,
     LoginComponent,
     RegistrationComponent,
     UserbookingmovieComponent,
     UsernavComponent,
-    UserviewmovieComponent
+    UserviewmovieComponent,
+    AdminnavComponent
   ],
   imports: [
     BrowserModule,
