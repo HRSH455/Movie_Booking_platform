@@ -1,1 +1,26 @@
-<p>navbar works!</p>
+<nav>
+    <h1>CINE WORLD</h1>
+    <ul *ngIf="!isLoggedIn">
+      <li><a routerLink="/register">Register</a></li>
+      <li><a routerLink="/login">Login</a></li>
+    </ul>
+    <ul *ngIf="isLoggedIn">
+      <li>Welcome {{username}} / {{userRole}}</li>
+      <li><a routerLink="/">Home</a></li>
+      <ng-container *ngIf="userRole === 'ADMIN'">
+        <li><a routerLink="/admin/add-movie">Add Movie</a></li>
+        <li><a routerLink="/admin/view-movies">View Movies</a></li>
+        <li><a routerLink="/admin/view-bookings">View Bookings</a></li>
+      </ng-container>
+      <ng-container *ngIf="userRole === 'USER'">
+        <li><a routerLink="/user/view-movies">View Movies</a></li>
+        <li><a routerLink="/user/view-bookings">My Bookings</a></li>
+      </ng-container>
+      <li><button (click)="showLogoutPopup = true">Logout</button></li>
+    </ul>
+    <div class="logout-popup" *ngIf="showLogoutPopup">
+      <p>Are you sure you want to logout?</p>
+      <button (click)="logout()">Yes, Logout</button>
+      <button (click)="showLogoutPopup = false">Cancel</button>
+    </div>
+  </nav>

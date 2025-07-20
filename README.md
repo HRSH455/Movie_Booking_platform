@@ -940,6 +940,23 @@ export class HomeComponent {
     </p>
   </div>
 </div>
+
+<h2>Welcome to MovieBooking – Your Gateway to Cinematic Delight</h2>
+<p>
+At MovieBooking, we’re committed to delivering top-notch movie experiences. 
+From the latest blockbusters to indie gems and family-friendly flicks, our platform 
+caters to every movie lover’s preferences.
+</p>
+<p>
+Our intuitive interface makes it simple to explore movie options, view showtimes, 
+and reserve your seats with ease. Take advantage of special deals and enjoy the magic 
+of cinema like never before.
+</p>
+<p>
+Make your movie nights memorable with MovieBooking! Discover exciting new releases, 
+read insightful reviews, and plan outings with loved ones. We’re here to elevate your film journey.
+</p>
+
 ```
 
 #### navbar.component.ts
