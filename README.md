@@ -1889,3 +1889,8 @@ export class AdminviewbookingComponent implements OnInit {
 
   <button type="submit">Register</button>
 </form>
+
+
+
+
+
