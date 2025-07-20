@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -18,6 +17,7 @@ import { UsernavComponent } from './components/usernav/usernav.component';
 import { UserviewmovieComponent } from './components/userviewmovie/userviewmovie.component';
 import { AdminnavComponent } from './components/adminnav/adminnav.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,8 @@ import { AdminnavComponent } from './components/adminnav/adminnav.component';
     UserbookingmovieComponent,
     UsernavComponent,
     UserviewmovieComponent,
-    AdminnavComponent
+    AdminnavComponent,
+
   ],
   imports: [
     BrowserModule,
