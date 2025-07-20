@@ -1850,3 +1850,25 @@ export class AdminviewbookingComponent implements OnInit {
         <td>{{booking.movie?.genre}}</td>
         <td>{{booking.movie?.duration}}</td>
         <td>{{booking.seatCount}}</td>
+
+
+
+        <form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="username">Username:</label>
+    <input id="username" name="username" [(ngModel)]="username" required />
+    <div class="error-message" *ngIf="submitted && !username">
+      Username is required
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input id="password" name="password" [(ngModel)]="password" required />
+    <div class="error-message" *ngIf="submitted && !password">
+      Password is required
+    </div>
+  </div>
+
+  <button type="submit">Register</button>
+</form>
