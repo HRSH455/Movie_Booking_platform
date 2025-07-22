@@ -1,7 +1,8 @@
 export interface Movie{
-    movieId?:number;
-    title :string,
-    genre :string,
-    duration :number;
+    id?:number;
+    title:string;
+    duration:number;
+    genre:string;
     price:number;
+    totalSeats:number;
 }

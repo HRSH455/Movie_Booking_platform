@@ -1,7 +1,7 @@
 export interface Booking{
-    bookingId?:number;
+    id?:number;
     userId?:number;
-    movieId:number;
+    movieId?:number;
     seatCount?:number;
-    totalCost: number;
+    totalCost?:number;
 }

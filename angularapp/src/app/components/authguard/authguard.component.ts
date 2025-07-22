@@ -1,15 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AuthService } from '../services/auth.service';
+import { UserStoreService } from '../helpers/user-store.service';
 
-@Component({
-  selector: 'app-authguard',
-  templateUrl: './authguard.component.html',
-  styleUrls: ['./authguard.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class AuthguardComponent implements OnInit {
+export class AuthGuard implements CanActivate {
+  constructor(private authservice: AuthService,
+    private router: Router,private userStore:UserStoreService) { }
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+      if(!this.userStore.isLoggedIn()){
+        this.router.navigate(['/login']);
+        return false;
+      }
+      const requiredRole=route.data['role'];
+      if(requiredRole){
+        const userRole=this.userStore.authUser?.role;
+        if(requiredRole === 'ADMIN' && userRole !== 'ADMIN'){
+          this.router.navigate(['/error']);
+          return false;
 
-  constructor() { }
+        }
+        if(requiredRole === 'USER' && userRole !== 'USER'){
+          this.router.navigate(['/error']);
+          return false;
+        }
 
-  ngOnInit(): void {
+      }
+      return true;
   }
+
 
 }
