@@ -100,7 +100,7 @@ CREATE TABLE `movie` (
 
 LOCK TABLES `movie` WRITE;
 /*!40000 ALTER TABLE `movie` DISABLE KEYS */;
-INSERT INTO `movie` VALUES (1,150,'cfgcv ',150,'uhbujb',20);
+INSERT INTO `movie` VALUES (1,120,'drama',100,'svsc',30);
 /*!40000 ALTER TABLE `movie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -151,7 +151,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'harsh123@gmail.com','9087654321','$2a$10$QemI0F7Wo29MSQXiPlW5C.u62PMg1oJuOaLkeViZGqzmEsEWjl7tu','ADMIN','Harsha');
+INSERT INTO `user` VALUES (1,'harshavardhanb.work@gmail.com','1234567890','$2a$10$T0OLZUCeTDJNzmW/FMMY4.4wDCJNV1AY2bQeKB/5irxI2xEKJ1hgy','USER','Harsha'),(2,'bommi.harshavardhan@ltimindtree.com','7008443367','$2a$10$/DvgREopKGYDE6wtb9K13.5wu17ZcPtyxlqdUL5I3PNVDEFqrf0BK','ADMIN','Harsha');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -173,7 +173,7 @@ CREATE TABLE `user_seq` (
 
 LOCK TABLES `user_seq` WRITE;
 /*!40000 ALTER TABLE `user_seq` DISABLE KEYS */;
-INSERT INTO `user_seq` VALUES (51);
+INSERT INTO `user_seq` VALUES (101);
 /*!40000 ALTER TABLE `user_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -186,4 +186,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-22 17:51:08
+-- Dump completed on 2025-07-22 18:06:09
