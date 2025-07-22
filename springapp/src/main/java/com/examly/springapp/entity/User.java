@@ -1,20 +1,21 @@
 package com.examly.springapp.entity;
-
-
-
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int userId;
+    @Column(unique = true)
     private String email;
     private String password;
     private String username;
     private String mobileNumber;
     private String userRole;
-    
     public User() {
     }
     public User(int userId, String email, String password, String username, String mobileNumber, String userRole) {
@@ -60,5 +61,12 @@ public class User {
     }
     public void setUserRole(String userRole) {
         this.userRole = userRole;
-    } 
+    }
+    @Override
+    public String toString() {
+        return "User [userId=" + userId + ", email=" + email + ", password=" + password + ", username=" + username
+                + ", mobileNumber=" + mobileNumber + ", userRole=" + userRole + "]";
+    }
+    
+
 }

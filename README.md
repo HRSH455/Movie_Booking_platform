@@ -1,161 +1,56 @@
-package com.examly.springapp.entity;
+package com.examly.springapp.repository;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import java.util.List;
 
-@Entity
-public class Booking {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private int seatCount;
-    private double totalCost;
-    @ManyToOne
-    @JoinColumn(name="movieId" , nullable=false)
-    private Movie movie;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
-    @ManyToOne
-    @JoinColumn(name = "userId",nullable=false)
-    private User user;
+import com.examly.springapp.entity.Booking;
+@Repository
+public interface BookingRepo extends JpaRepository<Booking,Long>{
+    @Query("SELECT COALESCE(SUM(b.seatCount),0) FROM Booking b WHERE b.movie.id = :movieId")
+    int countBookedSeatsByMovie(@Param("movieId") Long movieId);
 
-    public Booking() {
-    }
+    List<Booking> findByMovieId(Long movieid);
+    @Query("SELECT b FROM Booking b WHERE b.user.userId =:userId")
+    List<Booking> findByUser(@Param("userId") int userId);
 
-    public Booking(Long id, int seatCount, double totalCost, Movie movie, User user) {
-        this.id = id;
-        this.seatCount = seatCount;
-        this.totalCost = totalCost;
-        this.movie = movie;
-        this.user = user;
-    }
+}
+---------
+movieRe
 
-    public Long getId() {
-        return id;
-    }
+package com.examly.springapp.repository;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-    public int getSeatCount() {
-        return seatCount;
-    }
+import com.examly.springapp.entity.Movie;
 
-    public void setSeatCount(int seatCount) {
-        this.seatCount = seatCount;
-    }
+@Repository
+public interface MovieRepo extends JpaRepository<Movie,Long>{
 
-    public double getTotalCost() {
-        return totalCost;
-    }
+}
+---------
 
-    public void setTotalCost(double totalCost) {
-        this.totalCost = totalCost;
-    }
+userrp
 
-    public Movie getMovie() {
-        return movie;
-    }
+package com.examly.springapp.repository;
 
-    public void setMovie(Movie movie) {
-        this.movie = movie;
-    }
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
-    public User getUser() {
-        return user;
-    }
+import com.examly.springapp.entity.User;
 
-    public void setUser(User user) {
-        this.user = user;
-    }
+public interface UserRepo extends JpaRepository<User,Integer>{
+    User findByEmailAndPassword(String email, String password);
     
+    User findByEmail(String email);
+    @Query("SELECT u.userId from User u where u.email =?1")
+    int findIdbyEmail(String email);
 
-
-}
-----------
-movi
-
-package com.examly.springapp.entity;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-@Entity
-public class Movie {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    private String title;
-    private int duration;
-    private String genre;
-    private int price;
-    private int totalSeats;
-
-    public Movie() {
-    }
-
-    public Movie(long id, String title, int duration, String genre, int price, int totalSeats) {
-        this.id = id;
-        this.title = title;
-        this.duration = duration;
-        this.genre = genre;
-        this.price = price;
-        this.totalSeats = totalSeats;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public int getTotalSeats() {
-        return totalSeats;
-    }
-
-    public void setTotalSeats(int totalSeats) {
-        this.totalSeats = totalSeats;
-    }
+    @Query("SELECT u.username from User u where u.email =?1")
+    String findnamebyEmail(String email);
 
 }
----------------

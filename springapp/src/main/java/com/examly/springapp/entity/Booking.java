@@ -1,40 +1,44 @@
 package com.examly.springapp.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long bookingId;
+    private Long id;
     private int seatCount;
     private double totalCost;
-
     @ManyToOne
-    @JoinColumn(name = "movieId")
+    @JoinColumn(name="movieId" , nullable=false)
     private Movie movie;
 
     @ManyToOne
-    @JoinColumn(name ="userId")
+    @JoinColumn(name = "userId",nullable=false)
     private User user;
 
     public Booking() {
     }
 
-    public Booking(long bookingId, int seatCount, double totalCost, Movie movie, User user) {
-        this.bookingId = bookingId;
+    public Booking(Long id, int seatCount, double totalCost, Movie movie, User user) {
+        this.id = id;
         this.seatCount = seatCount;
         this.totalCost = totalCost;
         this.movie = movie;
         this.user = user;
     }
 
-    public long getBookingId() {
-        return bookingId;
+    public Long getId() {
+        return id;
     }
 
-    public void setBookingId(long bookingId) {
-        this.bookingId = bookingId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public int getSeatCount() {
@@ -68,6 +72,7 @@ public class Booking {
     public void setUser(User user) {
         this.user = user;
     }
+    
 
-        
+
 }
