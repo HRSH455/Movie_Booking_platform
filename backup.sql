@@ -51,7 +51,6 @@ CREATE TABLE `booking` (
 
 LOCK TABLES `booking` WRITE;
 /*!40000 ALTER TABLE `booking` DISABLE KEYS */;
-INSERT INTO `booking` VALUES (1,5,500,1,1),(2,2,400,2,1),(3,3,600,2,1),(4,3,600,2,3);
 /*!40000 ALTER TABLE `booking` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -73,7 +72,7 @@ CREATE TABLE `booking_seq` (
 
 LOCK TABLES `booking_seq` WRITE;
 /*!40000 ALTER TABLE `booking_seq` DISABLE KEYS */;
-INSERT INTO `booking_seq` VALUES (101);
+INSERT INTO `booking_seq` VALUES (1);
 /*!40000 ALTER TABLE `booking_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,7 +100,7 @@ CREATE TABLE `movie` (
 
 LOCK TABLES `movie` WRITE;
 /*!40000 ALTER TABLE `movie` DISABLE KEYS */;
-INSERT INTO `movie` VALUES (1,120,'drama',100,'svsc',45),(2,166,'slice f life',200,'F1',30),(3,145,'action',245,'salaar',30);
+INSERT INTO `movie` VALUES (1,150,'drama',180,'salaar',10);
 /*!40000 ALTER TABLE `movie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +122,7 @@ CREATE TABLE `movie_seq` (
 
 LOCK TABLES `movie_seq` WRITE;
 /*!40000 ALTER TABLE `movie_seq` DISABLE KEYS */;
-INSERT INTO `movie_seq` VALUES (101);
+INSERT INTO `movie_seq` VALUES (51);
 /*!40000 ALTER TABLE `movie_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +151,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'harshavardhanb.work@gmail.com','1234567890','$2a$10$T0OLZUCeTDJNzmW/FMMY4.4wDCJNV1AY2bQeKB/5irxI2xEKJ1hgy','USER','Harsha'),(2,'bommi.harshavardhan@ltimindtree.com','7008443367','$2a$10$/DvgREopKGYDE6wtb9K13.5wu17ZcPtyxlqdUL5I3PNVDEFqrf0BK','ADMIN','Harsha'),(3,'hari123@gmail.com','7998554322','$2a$10$pFDg9TH1qqwW9T5Q55AiHOg4XxlPMnOliH0KjZnxj6rXYe3if2AhS','USER','hari');
+INSERT INTO `user` VALUES (1,'bommi.harshavardhan@ltimindtree.com','7008443267','$2a$10$Vc9cW3.LdyNJmsY11s0Hx.gkCIk83aTssZGtq0SAScD8lvV47aAby','ADMIN','harsha');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -174,7 +173,7 @@ CREATE TABLE `user_seq` (
 
 LOCK TABLES `user_seq` WRITE;
 /*!40000 ALTER TABLE `user_seq` DISABLE KEYS */;
-INSERT INTO `user_seq` VALUES (101);
+INSERT INTO `user_seq` VALUES (51);
 /*!40000 ALTER TABLE `user_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -187,4 +186,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-22 20:04:53
+-- Dump completed on 2025-07-22 20:19:53
