@@ -30,6 +30,10 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable()
                 .authorizeHttpRequests()
+                .requestMatchers("/api/test/**")
+                .permitAll()
+                .and()
+                .authorizeHttpRequests()
                 .requestMatchers("/api/user/**")
                 .permitAll()
                 .and()

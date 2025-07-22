@@ -6,7 +6,7 @@ import { Movie } from '../models/movie.model';
   providedIn: 'root'
 })
 export class MovieService {
-  private apiUrl="https://8080-ebbdcaaae322305198bdafdcdedbeeccfone.premiumproject.examly.io/api/movie";
+  private apiUrl="https://ide-abbaeeabb329445339bdafdcdedbeeccfone.project.examly.io/proxy/8080/movie";
 
   constructor(private http:HttpClient) { }
 

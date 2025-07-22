@@ -11,7 +11,7 @@ import { UserStoreService } from '../helpers/user-store.service';
 })
 export class AuthService {
   
-  private baseUrl="https://ide-eabccbcccfbbfc328808310bdafdcdedbeeccfone.project.examly.io/proxy/8080/api/user/"
+  private baseUrl="https://ide-abbaeeabb329445339bdafdcdedbeeccfone.project.examly.io/proxy/8080/user"
 
   constructor(private http:HttpClient,private userStore:UserStoreService) {
    }
