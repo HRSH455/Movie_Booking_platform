@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BookingService {
-  private apiUrl="https://ide-abbaeeabb329445339bdafdcdedbeeccfone.project.examly.io/proxy/8080/booking";
+  private apiUrl="https://ide-abbaeeabb329445339bdafdcdedbeeccfone.project.examly.io/proxy/8080/api/booking";
 
   constructor(private http:HttpClient) { }
 
