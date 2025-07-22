@@ -52,7 +52,7 @@ export class AdminaddmovieComponent implements OnInit {
   }
 
   closeModal(): void {
-    alert(this.isEditing ? "Movie updated Successfullu" : "Movie Added Successfully");
+    alert(this.isEditing ? "Movie updated Successfully" : "Movie Added Successfully");
     this.router.navigate(['admin/view/Movies'])
   }
   cancelOperation(): void {

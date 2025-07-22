@@ -33,7 +33,7 @@ export class AdminviewmovieComponent implements OnInit {
       this.movieService.deleteMovie(movieId).subscribe(
         () => {
           this.movies = this.movies.filter(movie => movie.id !== movieId);
-          alert('Movie deleted successfully');
+          alert('Movie deleted successfully ');
         },
         (error) => {
           this.errorMessage = 'Error deleting movie';
