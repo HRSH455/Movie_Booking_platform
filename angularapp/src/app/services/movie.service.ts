@@ -1,33 +1,30 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Movie } from '../models/movie.model';
-
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
-  private baseUrl = 'http://localhost:8080/api/movie';
+  private apiUrl="https://8080-ebbdcaaae322305198bdafdcdedbeeccfone.premiumproject.examly.io/api/movie";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http:HttpClient) { }
 
-  addMovie(movie: Movie): Observable<Movie> {
-    return this.http.post<Movie>(this.baseUrl, movie);
+  addMovie(movie:Movie):Observable<Movie>{
+    return this.http.post<Movie>(this.apiUrl,movie);
+  }
+  getAllMovies():Observable<Movie[]>{
+    return this.http.get<Movie[]>(this.apiUrl);
+  }
+  getMovieById(movieId:number):Observable<Movie>{
+    return this.http.get<Movie>(this.apiUrl+"/"+movieId);
+  }
+  deleteMovie(movieId:number):Observable<Movie>{
+    return this.http.delete<Movie>(this.apiUrl+"/"+movieId);
+  }
+  updateMovie(movieId:number,movie:Movie):Observable<Movie>{
+    return this.http.put<Movie>(this.apiUrl+"/"+movieId,movie);
   }
 
-  getAllMovies(): Observable<Movie[]> {
-    return this.http.get<Movie[]>(this.baseUrl);
-  }
 
-  getMovieById(movieId: number): Observable<Movie> {
-    return this.http.get<Movie>(`${this.baseUrl}/${movieId}`);
-  }
-
-  updateMovie(movieId: number, movie: Movie): Observable<Movie> {
-    return this.http.put<Movie>(`${this.baseUrl}/${movieId}`, movie);
-  }
-
-  deleteMovie(movieId: number): Observable<boolean> {
-    return this.http.delete<boolean>(`${this.baseUrl}/${movieId}`);
-  }
 }

@@ -1,45 +1,50 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { AdminaddmovieComponent } from './components/adminaddmovie/adminaddmovie.component';
-import { AdminviewmovieComponent } from './components/adminviewmovie/adminviewmovie.component';
-import { AdminviewbookingComponent } from './components/adminviewbooking/adminviewbooking.component';
-import { UserviewbookingComponent } from './components/userviewbooking/userviewbooking.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { AuthguardComponent } from './components/authguard/authguard.component';
 import { ErrorComponent } from './components/error/error.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { UserbookingmovieComponent } from './components/userbookingmovie/userbookingmovie.component';
-import { UsernavComponent } from './components/usernav/usernav.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AdminNavComponent } from './components/admin-nav/admin-nav.component';
+import { UserNavComponent } from './components/user-nav/user-nav.component';
+import { AdminaddmovieComponent } from './components/adminaddmovie/adminaddmovie.component';
+import { AdminviewbookingComponent } from './components/adminviewbooking/adminviewbooking.component';
 import { UserviewmovieComponent } from './components/userviewmovie/userviewmovie.component';
-import { AdminnavComponent } from './components/adminnav/adminnav.component';
-
+import { AdminviewmovieComponent } from './components/adminviewmovie/adminviewmovie.component';
+import { UserviewbookingComponent } from './components/userviewbooking/userviewbooking.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AdminaddmovieComponent,
-    AdminviewmovieComponent,
-    AdminviewbookingComponent,
-    UserviewbookingComponent,
-    NavbarComponent,
-    AuthguardComponent,
     ErrorComponent,
     LoginComponent,
     RegistrationComponent,
     UserbookingmovieComponent,
-    UsernavComponent,
+    NavbarComponent,
+    AdminNavComponent,
+    UserNavComponent,
+    AdminaddmovieComponent,
+    AdminviewbookingComponent,
     UserviewmovieComponent,
-    AdminnavComponent,
-
+    AdminaddmovieComponent,
+    AdminviewmovieComponent,
+    AdminviewbookingComponent,
+    UserviewmovieComponent,
+    UserviewbookingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

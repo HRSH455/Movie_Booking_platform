@@ -1,52 +1,52 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../models/user.model';
+import { tap } from 'rxjs/operators';
 import { Login } from '../models/login.model';
+import { UserStoreService } from '../helpers/user-store.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:8080/api/user';
-  private currentUserSubject: BehaviorSubject<User | null>;
-  public currentUser: Observable<User | null>;
+  
+  private baseUrl="https://ide-eabccbcccfbbfc328808310bdafdcdedbeeccfone.project.examly.io/proxy/8080/api/user/"
 
-  constructor(private http: HttpClient) {
-    this.currentUserSubject = new BehaviorSubject<User | null>(JSON.parse(localStorage.getItem('currentUser') || 'null'));
-    this.currentUser = this.currentUserSubject.asObservable();
+  constructor(private http:HttpClient,private userStore:UserStoreService) {
+   }
+
+  register(user:User):Observable<User>{
+    return this.http.post<User>(this.baseUrl+"/register",user).pipe(
+      tap(registeredUser=>{
+        console.log("User registered successfully",registeredUser);
+      })
+    );
+  }
+  login(credentials:Login):Observable<User>{
+    return this.http.post<User>(this.baseUrl+"/login",credentials);
+  }
+  logout():void{
+    this.userStore.setUser(null);
+    }
+
+  isAuthenticated():boolean{
+    return this.userStore.isLoggedIn();
+    }
+  isAdmin():boolean{
+    const authUser=this.userStore.authUser;
+    return authUser?.role === 'ADMIN';
+    }
+  getCurrentUserId():number | null{
+    const authUser=this.userStore.authUser;
+    return authUser ? authUser.userId:null;
+    
   }
 
-  public get currentUserValue(): User | null {
-    return this.currentUserSubject.value;
+  getCustomerName():string | null{
+    const authUser=this.userStore.authUser;
+    return authUser?.userName;
   }
 
-  register(user: User): Observable<User> {
-    return this.http.post<User>(`${this.baseUrl}/register`, user);
-  }
 
-  login(login: Login): Observable<User> {
-    return this.http.post<User>(`${this.baseUrl}/login`, login);
-  }
-
-  logout() {
-    localStorage.removeItem('currentUser');
-    this.currentUserSubject.next(null);
-  }
-
-  isLoggedIn(): boolean {
-    return !!this.currentUserValue;
-  }
-
-  isAdmin(): boolean {
-    return this.currentUserValue?.userRole === 'ADMIN';
-  }
-
-  isUser(): boolean {
-    return this.currentUserValue?.userRole === 'USER';
-  }
-
-  getUsername(): string | null {
-    return this.currentUserValue?.username || null;
-  }
 }

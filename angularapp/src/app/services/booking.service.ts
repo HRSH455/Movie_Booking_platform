@@ -1,37 +1,29 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 import { Booking } from '../models/booking.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookingService {
-  private baseUrl = 'http://localhost:8080/api/booking';
+  private apiUrl="https://8080-ebbdcaaae322305198bdafdcdedbeeccfone.premiumproject.examly.io/api/booking";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http:HttpClient) { }
 
-  addBooking(booking: Booking): Observable<Booking> {
-    return this.http.post<Booking>(this.baseUrl, booking);
+  addBooking(movieId:number,userId:number,booking:Booking):Observable<Booking>{
+    return this.http.post<Booking>(this.apiUrl+"/"+userId+"/"+movieId,booking);
   }
-
-  getBookingById(bookingId: number): Observable<Booking> {
-    return this.http.get<Booking>(`${this.baseUrl}/${bookingId}`);
+  getUserBookings(userId:number):Observable<Booking[]>{
+    return this.http.get<Booking[]>(this.apiUrl+"/user/"+userId);
   }
-
-  getAllBookings(): Observable<Booking[]> {
-    return this.http.get<Booking[]>(this.baseUrl);
+  getBookingbyId(bookingId:number):Observable<Booking>{
+    return this.http.get<Booking>(this.apiUrl+"/"+bookingId);
   }
-
-  deleteBooking(bookingId: number): Observable<boolean> {
-    return this.http.delete<boolean>(`${this.baseUrl}/${bookingId}`);
+  updateBooking(bookingId:number,updateBooking:Booking):Observable<Booking>{
+    return this.http.put<Booking>(this.apiUrl+"/"+bookingId,updateBooking);
   }
-
-  getBookingsByMovieId(movieId: number): Observable<Booking[]> {
-    return this.http.get<Booking[]>(`${this.baseUrl}/movie/${movieId}`);
-  }
-
-  getBookingsByUserId(userId: number): Observable<Booking[]> {
-    return this.http.get<Booking[]>(`${this.baseUrl}/user/${userId}`);
+  getAllBookings():Observable<Booking[]>{
+    return this.http.get<Booking[]>(this.apiUrl);
   }
 }
