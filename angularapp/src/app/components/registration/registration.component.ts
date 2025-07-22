@@ -1,66 +1,47 @@
-import { Component } from '@angular/core';
-// import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-// import { Router } from '@angular/router';
-// import { AuthService } from '../../services/auth.service';
-// import { User } from '../../models/user.model';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { User } from 'src/app/models/user.model';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
 })
-export class RegistrationComponent {
-  // registerForm: FormGroup;
-  // errorMessage: string = '';
-  // successMessage: string = '';
-  username :string =''
-  password :string = ''
-  email :string =''
+export class RegistrationComponent{
+  errorMessage: string = '';
+  successMessage: string = '';
 
-  ngOnInit() :void{
+  constructor(private authService: AuthService,
+    private router: Router) {
 
   }
-  constructor(){}
-    // private fb: FormBuilder,
-    // private authService: AuthService,
-    // private router: Router
-  
-    // this.registerForm = this.fb.group({
-    //   username: ['', Validators.required],
-    //   email: ['', [Validators.required, Validators.email]],
-    //   password: ['', [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)]],
-    //   confirmPassword: ['', Validators.required],
-    //   mobileNumber: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
-    //   userRole: ['', Validators.required]
-    // }, { validator: this.passwordMatchValidator });
-  
+  register(form: NgForm): void {
+    if (form.valid) {
+      const userData: User = new User(
+        form.value.email,
+        form.value.password,
+        form.value.username,
+        form.value.mobileNumber,
+        form.value.userRole
+      );
 
-  // passwordMatchValidator(form: FormGroup) {
-  //   return form.get('password')?.value === form.get('confirmPassword')?.value 
-  //     ? null : { mismatch: true };
-  // }
+      this.authService.register(userData).subscribe({
+        next: (registeredUser) => {
+          this.successMessage = 'Registration successful!';
+          setTimeout(() => {
+            this.router.navigate(['/login']);
+          }, 2000);
+        },
+        error: (err) => {
+          this.errorMessage = 'Registration failed. Please try again.';
+          console.error('Registration error', err);
+        }
+      });
+    }
+  }
 
-  // register() {
-  //   if (this.registerForm.valid) {
-  //     const user: User = {
-  //       username: this.registerForm.value.username,
-  //       email: this.registerForm.value.email,
-  //       password: this.registerForm.value.password,
-  //       mobileNumber: this.registerForm.value.mobileNumber,
-  //       userRole: this.registerForm.value.userRole
-  //     };
-
-  //     this.authService.register(user).subscribe(
-  //       response => {
-  //         this.successMessage = 'Registration successful! Please login.';
-  //         setTimeout(() => {
-  //           this.router.navigate(['/login']);
-  //         }, 2000);
-  //       },
-  //       error => {
-  //         this.errorMessage = 'Registration failed. Please try again.';
-  //       }
-  //     );
-  //   }
-  // }
 }
+
+
