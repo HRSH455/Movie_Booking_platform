@@ -1,1 +1,45 @@
-<p>adminviewbooking works!</p>
+<div class="booking-management">
+    <h2>Booking Management</h2>
+  
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  
+    <div class="summary">
+      <p><strong>Total Bookings:</strong> {{ bookings.length }}</p>
+      <p><strong>Total Revenue:</strong> ₹{{ calculateTotalRevenue() | number:'1.2-2' }}</p>
+    </div>
+  
+    <div class="sorting">
+      <label>Sort By:</label> {{ option.label }}
+      <label>Sort Direction:</label>
+      {{ sortDirection === 'asc' ? 'Ascending ▲' : 'Descending ▼' }}
+    </div>
+  
+    <div *ngIf="bookings.length === 0" class="no-bookings">
+      No bookings found.
+    </div>
+  
+    <table *ngIf="bookings.length > 0" class="booking-table">
+      <thead>
+        <tr>
+          <th>Booking ID</th>
+          <th>User</th>
+          <th>Movie</th>
+          <th>Seats</th>
+          <th>Total Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings">
+          <td>{{ booking.id }}</td>
+          <td>{{ booking.user?.username || 'N/A' }}</td>
+          <td>{{ booking.movie?.title || 'N/A' }}</td>
+          <td>{{ booking.seatCount }}</td>
+          <td>₹{{ booking.totalCost | number:'1.2-2' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
