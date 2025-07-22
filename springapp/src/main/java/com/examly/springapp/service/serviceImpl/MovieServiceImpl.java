@@ -1,8 +1,8 @@
 package com.examly.springapp.service.serviceImpl;
 
-import java.util.*;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.examly.springapp.entity.Movie;
@@ -11,42 +11,44 @@ import com.examly.springapp.service.MovieService;
 
 @Service
 public class MovieServiceImpl implements MovieService {
-
     @Autowired
-    private MovieRepo movieRepo;
+    private MovieRepo repo;
 
     @Override
-    public Movie addMovie(Movie movie) {
-        return movieRepo.save(movie);
+    public Movie addMovie(Movie m) {
+        return repo.save(m);
+    }
+
+    @Override
+    public Movie updateMovie(Long id, Movie m) {
+        Movie l = repo.findById(id).orElse(null);
+        if (l == null) {
+            return null;
+        }
+
+        l.setId(id);
+        l.setTitle(m.getTitle());
+        l.setDuration(m.getDuration());
+        l.setGenre(m.getGenre());
+        l.setPrice(m.getPrice());
+        l.setTotalSeats(m.getTotalSeats());
+        return repo.save(l);
     }
 
     @Override
     public List<Movie> getAllMovies() {
-        return movieRepo.findAll();
+        return repo.findAll();
     }
 
     @Override
-    public Movie getMovieById(Long movieId) {
-        return movieRepo.findById(movieId).orElse(null);
+    public Movie getMovieById(Long id) {
+        return repo.findById(id).orElse(null);
     }
 
     @Override
-    public Movie updateMovie(Long movieId, Movie movie) {
-        Movie existingMovie = movieRepo.findById(movieId).orElse(null);
-        if(existingMovie != null) {
-            existingMovie.setTitle(movie.getTitle());
-            existingMovie.setDuration(movie.getDuration());
-            existingMovie.setGenre(movie.getGenre());
-            existingMovie.setPrice(movie.getPrice());
-            return movieRepo.save(existingMovie);
-        }
-        return null;
-    }
-
-    @Override
-    public boolean deleteMovie(Long movieId) {
-        if(movieRepo.existsById(movieId)) {
-            movieRepo.deleteById(movieId);
+    public boolean deleteMovie(Long id) {
+        if (repo.existsById(id)) {
+            repo.deleteById(id);
             return true;
         }
         return false;
