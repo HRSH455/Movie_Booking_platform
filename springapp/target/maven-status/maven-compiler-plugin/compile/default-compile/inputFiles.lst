@@ -10,6 +10,7 @@
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/exception/GlobalExceptionHandler.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/entity/Movie.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/controller/UserController.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/configuration/JwtAuthenticationFilter.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/exception/MovieNotFoundException.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/controller/BookingController.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/configuration/JwtAuthenticationEntryPoint.java
