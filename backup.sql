@@ -51,6 +51,7 @@ CREATE TABLE `booking` (
 
 LOCK TABLES `booking` WRITE;
 /*!40000 ALTER TABLE `booking` DISABLE KEYS */;
+INSERT INTO `booking` VALUES (1,3,750,2,1),(2,3,750,2,2);
 /*!40000 ALTER TABLE `booking` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -72,7 +73,7 @@ CREATE TABLE `booking_seq` (
 
 LOCK TABLES `booking_seq` WRITE;
 /*!40000 ALTER TABLE `booking_seq` DISABLE KEYS */;
-INSERT INTO `booking_seq` VALUES (1);
+INSERT INTO `booking_seq` VALUES (101);
 /*!40000 ALTER TABLE `booking_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -186,4 +187,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-23  5:29:25
+-- Dump completed on 2025-07-23  5:44:24
