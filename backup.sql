@@ -51,7 +51,6 @@ CREATE TABLE `booking` (
 
 LOCK TABLES `booking` WRITE;
 /*!40000 ALTER TABLE `booking` DISABLE KEYS */;
-INSERT INTO `booking` VALUES (1,2,360,1,2),(2,3,540,1,2);
 /*!40000 ALTER TABLE `booking` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -73,7 +72,7 @@ CREATE TABLE `booking_seq` (
 
 LOCK TABLES `booking_seq` WRITE;
 /*!40000 ALTER TABLE `booking_seq` DISABLE KEYS */;
-INSERT INTO `booking_seq` VALUES (101);
+INSERT INTO `booking_seq` VALUES (1);
 /*!40000 ALTER TABLE `booking_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,7 +100,6 @@ CREATE TABLE `movie` (
 
 LOCK TABLES `movie` WRITE;
 /*!40000 ALTER TABLE `movie` DISABLE KEYS */;
-INSERT INTO `movie` VALUES (1,150,'drama',180,'salaar',15);
 /*!40000 ALTER TABLE `movie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +121,7 @@ CREATE TABLE `movie_seq` (
 
 LOCK TABLES `movie_seq` WRITE;
 /*!40000 ALTER TABLE `movie_seq` DISABLE KEYS */;
-INSERT INTO `movie_seq` VALUES (101);
+INSERT INTO `movie_seq` VALUES (1);
 /*!40000 ALTER TABLE `movie_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +150,6 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'bommi.harshavardhan@ltimindtree.com','7008443267','$2a$10$Vc9cW3.LdyNJmsY11s0Hx.gkCIk83aTssZGtq0SAScD8lvV47aAby','ADMIN','harsha'),(2,'harshavardhanb.work@gmail.com','1234567890','$2a$10$Bhkv9rUI/rsvfPbk9mKF8eJWt8sGs/BIsllJvARHeFUyQrQVUxY7C','USER','Harsha');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -174,7 +171,7 @@ CREATE TABLE `user_seq` (
 
 LOCK TABLES `user_seq` WRITE;
 /*!40000 ALTER TABLE `user_seq` DISABLE KEYS */;
-INSERT INTO `user_seq` VALUES (101);
+INSERT INTO `user_seq` VALUES (1);
 /*!40000 ALTER TABLE `user_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -187,4 +184,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-22 21:10:41
+-- Dump completed on 2025-07-23  4:14:25
