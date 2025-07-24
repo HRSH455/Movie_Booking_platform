@@ -51,7 +51,7 @@ CREATE TABLE `booking` (
 
 LOCK TABLES `booking` WRITE;
 /*!40000 ALTER TABLE `booking` DISABLE KEYS */;
-INSERT INTO `booking` VALUES (1,3,750,2,1),(2,3,750,2,2),(52,3,900,1,2);
+INSERT INTO `booking` VALUES (1,3,750,2,1),(2,3,750,2,2),(52,3,900,1,2),(102,2,560,2,102),(103,1,160,52,102);
 /*!40000 ALTER TABLE `booking` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -73,7 +73,7 @@ CREATE TABLE `booking_seq` (
 
 LOCK TABLES `booking_seq` WRITE;
 /*!40000 ALTER TABLE `booking_seq` DISABLE KEYS */;
-INSERT INTO `booking_seq` VALUES (151);
+INSERT INTO `booking_seq` VALUES (201);
 /*!40000 ALTER TABLE `booking_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +152,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'harsha123@gmail.com','9876543210','$2a$10$En2EqvyA.xvQfDQgI49hdOBW71X2fvnCR7CfMigrXvP..2T16gaBG','ADMIN','harsha_v'),(2,'hari123@gmail.com','9874543210','$2a$10$1PDHbGmWM8KTI2c7ifSXQOUM7qDPWD/fFnz/B5py7GY.5u4a4dCY6','USER','hari'),(52,'anshu123@gmail.com','2345654322','$2a$10$ZwWHNpR5T2hqYCg7ET29qOQF9KUkmrVTPqiSxKB8SIWyR33oikKZ2','ADMIN','anshu');
+INSERT INTO `user` VALUES (1,'harsha123@gmail.com','9876543210','$2a$10$En2EqvyA.xvQfDQgI49hdOBW71X2fvnCR7CfMigrXvP..2T16gaBG','ADMIN','harsha_v'),(2,'hari123@gmail.com','9874543210','$2a$10$1PDHbGmWM8KTI2c7ifSXQOUM7qDPWD/fFnz/B5py7GY.5u4a4dCY6','USER','hari'),(52,'anshu123@gmail.com','2345654322','$2a$10$ZwWHNpR5T2hqYCg7ET29qOQF9KUkmrVTPqiSxKB8SIWyR33oikKZ2','ADMIN','anshu'),(102,'hari12@gmail.com','5409853084','$2a$10$yAtB.8SpOb6k2Wbo9h3gPOlTdamfTnVluuYa5EoUHNMKDM.Caz/Im','USER','hari');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -174,7 +174,7 @@ CREATE TABLE `user_seq` (
 
 LOCK TABLES `user_seq` WRITE;
 /*!40000 ALTER TABLE `user_seq` DISABLE KEYS */;
-INSERT INTO `user_seq` VALUES (151);
+INSERT INTO `user_seq` VALUES (201);
 /*!40000 ALTER TABLE `user_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -187,4 +187,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-24  6:42:03
+-- Dump completed on 2025-07-24  6:57:03

@@ -32,6 +32,7 @@ export class UserbookingmovieComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    
     this.movieId=+this.route.snapshot.paramMap.get('movieId');
     this.userId=this.userStorageService.authUser?.userId;
       if (this.movieId) {
@@ -40,6 +41,8 @@ export class UserbookingmovieComponent implements OnInit {
       }
     
   }
+  
+  
 
   loadMovieDetails(): void {
     this.movieService.getMovieById(this.movieId).subscribe(
@@ -55,10 +58,23 @@ export class UserbookingmovieComponent implements OnInit {
   }
 
   initializeSeatGrid(): void {
-    this.seatGrid = Array.from({ length: 10 }, () => 
-      Array.from({ length: 10 }, () => false)
+    const rows = 5;
+  const cols = 10;
+    this.seatGrid = Array.from({ length: rows }, () => 
+      Array.from({ length: cols }, () => false)
     );
   }
+
+//   seatGrid: boolean[][] = [];
+
+// ngOnInit() {
+//   const rows = 5;
+//   const cols = 10;
+
+//   this.seatGrid = Array.from({ length: rows }, () =>
+//     Array.from({ length: cols }, () => false)
+//   );
+// }
 
   incrementSeats(): void {
     if (this.selectedSeats < this.maxSeats) {
