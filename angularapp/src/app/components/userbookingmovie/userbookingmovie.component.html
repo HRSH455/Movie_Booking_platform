@@ -47,8 +47,7 @@
               *ngFor="let seat of row; let colIndex = index"
               class="seat"
               [class.selected]="seat"
-              (click)="toggleSeat(rowIndex, colIndex)"
-            >
+              (click)="toggleSeat(rowIndex, colIndex)">
               {{ String.fromCharCode(65 + rowIndex) }}{{ colIndex + 1 }}
             </div>
           </div>
