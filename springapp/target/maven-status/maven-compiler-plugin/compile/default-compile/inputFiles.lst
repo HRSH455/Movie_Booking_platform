@@ -17,8 +17,8 @@
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/service/serviceImpl/BookingServiceImpl.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/entity/User.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/configuration/MySpringUser.java
-/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/exception/UserNotFoundException.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/repository/MovieRepo.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/exception/UserNotFoundException.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/SpringappApplication.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/service/MovieService.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/exception/ResourceNotFoundException.java
