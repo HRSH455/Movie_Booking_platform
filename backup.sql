@@ -101,7 +101,7 @@ CREATE TABLE `movie` (
 
 LOCK TABLES `movie` WRITE;
 /*!40000 ALTER TABLE `movie` DISABLE KEYS */;
-INSERT INTO `movie` VALUES (1,152,'Action',300,'The Dark Knight',120),(2,169,'Adventure,scifi',280,'Interstellar',150);
+INSERT INTO `movie` VALUES (1,152,'Action',300,'The Dark Knight',120),(2,169,'Adventure,scifi',280,'Interstellar',150),(52,200,'fight,drama',160,'fight club',60);
 /*!40000 ALTER TABLE `movie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +123,7 @@ CREATE TABLE `movie_seq` (
 
 LOCK TABLES `movie_seq` WRITE;
 /*!40000 ALTER TABLE `movie_seq` DISABLE KEYS */;
-INSERT INTO `movie_seq` VALUES (101);
+INSERT INTO `movie_seq` VALUES (151);
 /*!40000 ALTER TABLE `movie_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +152,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'harsha123@gmail.com','9876543210','$2a$10$En2EqvyA.xvQfDQgI49hdOBW71X2fvnCR7CfMigrXvP..2T16gaBG','ADMIN','harsha_v'),(2,'hari123@gmail.com','9874543210','$2a$10$1PDHbGmWM8KTI2c7ifSXQOUM7qDPWD/fFnz/B5py7GY.5u4a4dCY6','USER','hari');
+INSERT INTO `user` VALUES (1,'harsha123@gmail.com','9876543210','$2a$10$En2EqvyA.xvQfDQgI49hdOBW71X2fvnCR7CfMigrXvP..2T16gaBG','ADMIN','harsha_v'),(2,'hari123@gmail.com','9874543210','$2a$10$1PDHbGmWM8KTI2c7ifSXQOUM7qDPWD/fFnz/B5py7GY.5u4a4dCY6','USER','hari'),(52,'anshu123@gmail.com','2345654322','$2a$10$ZwWHNpR5T2hqYCg7ET29qOQF9KUkmrVTPqiSxKB8SIWyR33oikKZ2','ADMIN','anshu');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -174,7 +174,7 @@ CREATE TABLE `user_seq` (
 
 LOCK TABLES `user_seq` WRITE;
 /*!40000 ALTER TABLE `user_seq` DISABLE KEYS */;
-INSERT INTO `user_seq` VALUES (101);
+INSERT INTO `user_seq` VALUES (151);
 /*!40000 ALTER TABLE `user_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -187,4 +187,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-24  4:49:00
+-- Dump completed on 2025-07-24  4:57:57
