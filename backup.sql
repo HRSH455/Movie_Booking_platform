@@ -101,7 +101,7 @@ CREATE TABLE `movie` (
 
 LOCK TABLES `movie` WRITE;
 /*!40000 ALTER TABLE `movie` DISABLE KEYS */;
-INSERT INTO `movie` VALUES (1,152,'Action',300,'The Dark Knight',120),(2,169,'Adventure,scifi',280,'Interstellar',150),(52,200,'fight,drama',160,'fight club',60);
+INSERT INTO `movie` VALUES (1,152,'Action',300,'The Dark Knight',120),(2,169,'Adventure,scifi',280,'Interstellar',150),(52,200,'fight,drama',160,'fight club',60),(102,148,'Sci-Fi',0,'Inception',0);
 /*!40000 ALTER TABLE `movie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +123,7 @@ CREATE TABLE `movie_seq` (
 
 LOCK TABLES `movie_seq` WRITE;
 /*!40000 ALTER TABLE `movie_seq` DISABLE KEYS */;
-INSERT INTO `movie_seq` VALUES (151);
+INSERT INTO `movie_seq` VALUES (201);
 /*!40000 ALTER TABLE `movie_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -187,4 +187,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-24  6:57:03
+-- Dump completed on 2025-07-24  7:02:36
