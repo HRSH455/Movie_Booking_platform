@@ -4,8 +4,8 @@
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/configuration/JwtUtils.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/repository/BookingRepo.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/configuration/SecurityConfig.java
-/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/exception/InsufficientSeatCountException.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/entity/AuthUser.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/exception/InsufficientSeatCountException.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/controller/MovieController.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/exception/GlobalExceptionHandler.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/entity/Movie.java
@@ -14,8 +14,8 @@
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/exception/MovieNotFoundException.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/controller/BookingController.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/configuration/JwtAuthenticationEntryPoint.java
-/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/service/serviceImpl/BookingServiceImpl.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/entity/User.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/service/serviceImpl/BookingServiceImpl.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/configuration/MySpringUser.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/repository/MovieRepo.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/exception/UserNotFoundException.java
@@ -24,8 +24,8 @@
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/exception/ResourceNotFoundException.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/service/serviceImpl/MovieServiceImpl.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/exception/BookingNotFoundException.java
-/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/service/BookingService.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/configuration/MyUserDetails.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/service/BookingService.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/controller/TestController.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/service/UserService.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/repository/UserRepo.java
