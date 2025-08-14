@@ -1,11 +1,6 @@
-
-seatGrid: boolean[][] = [];
-
-ngOnInit() {
-  const rows = 5;
-  const cols = 10;
-
-  this.seatGrid = Array.from({ length: rows }, () =>
-    Array.from({ length: cols }, () => false)
-  );
-}
+echo "# Movie_Booking_platform" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/HRSH455/Movie_Booking_platform.git
